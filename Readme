@@ -1,3 +1,7 @@
+## This is the code for the paper Learning to Prompt for Vision-Language Emotion Recognition
+
+## Readme
+
 Create a conda virtual environment and activate it:
 conda create --name myenv python=3.8.16
 conda activate myenv
