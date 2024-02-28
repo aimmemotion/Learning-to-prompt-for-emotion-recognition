@@ -1,5 +1,6 @@
 ## This is the official code for the paper "Learning to Prompt for Vision-Language Emotion Recognition" 
 
+### Environment installation 
 
 ```
 Create a conda virtual environment and activate it:
@@ -20,8 +21,9 @@ pip install pandas
 pip install seaborn
 pip install -U scikit-learn
 pip install transformers==4.15.0
-
-
+```
+### Dataset Preparation
+```
 For standard folder dataset, move images to labeled sub-folders. The file structure should look like:
 Emotion6
 ├── train
@@ -42,15 +44,18 @@ Emotion6
     │   ├── img6.jpeg
     │   └── ...
     └── ...
-
-train example:
+```
+### Training
+```
 python meta_training.py --dataset_base ../Dataset/Emotion6/ \
 --task_name Emotion642 \
 --label_seen 0 1 2 3 \
 --class_name anger disgust fear joy sadness surprise \
 --class_text anger disgust fear joy sadness surprise
+```
 
-test example:
+### Testing
+```
 python meta_testing.py --dataset_base ../Dataset/Emotion6/ \
 --task_name Emotion642 \
 --class_name sadness surprise \
